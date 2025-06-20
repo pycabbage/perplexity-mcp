@@ -52,6 +52,7 @@ jobs:
         uses: docker/build-push-action@v6
         id: push
         with:
+          context: perplexity-ask
           push: true
           outputs: type=registry,oci-mediatypes=true,compression=zstd,compression-level=22,force-compression=true
           tags: ${{ steps.meta.outputs.tags }}
